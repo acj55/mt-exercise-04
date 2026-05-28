@@ -1,0 +1,123 @@
+Translation examples for manual analysis
+==================================================
+
+Example 1
+--------------------------------------------------
+Source (NL):      Een paar jaar geleden heeft Peter Skillman hier, bij TED,  een ontwerpwedstrijd laten zien.
+Reference (EN):   Several years ago here at TED, Peter Skillman introduced a design challenge
+Word model:       A few years ago has <unk> <unk> <unk> here at <unk> a <unk>
+BPE 2000:         A couple of years ago, Peter Skillman, at TED, a design statement.
+BPE 4000:         A few years ago, Peter Skillman, at TED, show a design competition.
+
+Example 2
+--------------------------------------------------
+Source (NL):      De marshmallow-challenge.
+Reference (EN):   called the marshmallow challenge.
+Word model:       The <unk>
+BPE 2000:         The marshmallow-challenge.
+BPE 4000:         The marshmallow challenge.
+
+Example 3
+--------------------------------------------------
+Source (NL):      Het idee is vrij simpel:  Groepjes van vier moeten een zo hoog mogelijk bouwwerk maken  met twintig stuks spaghetti,  een meter tape, een meter touw  en een marshmallow.
+Reference (EN):   And the idea's pretty simple: Teams of four have to build the tallest free-standing structure out of 20 sticks of spaghetti, one yard of tape, one yard of string and a marshmallow.
+Word model:       The idea is pretty <unk> <unk> of four have to be a <unk> <unk> <unk> with <unk> <unk> <unk> <unk> <unk> <unk> a <unk> <unk> <unk> <unk> <unk> and a <unk>
+BPE 2000:         The idea is free simple: Gropes of four have to be a very high construction of spaghetti, a meter tape, a meter tape and a marshmallow.
+BPE 4000:         The idea is pretty simple, is, you know, you know, the idea is quite simple, construct a meter tape, a foot, a foot, a foot, and a marshmallow.
+
+Example 4
+--------------------------------------------------
+Source (NL):      De marshmallow moet er bovenop.
+Reference (EN):   The marshmallow has to be on top.
+Word model:       The <unk> needs to <unk>
+BPE 2000:         The marshmust on top.
+BPE 4000:         The marshmallow needs to it.
+
+Example 5
+--------------------------------------------------
+Source (NL):      En, hoewel het simpel klinkt, het blijkt nog best moeilijk,  want deze opdracht dwingt mensen  om heel snel samen te werken.
+Reference (EN):   And, though it seems really simple, it's actually pretty hard because it forces people to collaborate very quickly.
+Word model:       And, although the simple <unk> it turns out quite <unk> because this <unk> <unk> people to work <unk>
+BPE 2000:         And, though it looks very simple, it turns out to be a very difficult, because this exciting people to work together.
+BPE 4000:         And, although it sounds very simple, it turns out that it's quite difficult, because this task, people to work very quickly.
+
+Example 6
+--------------------------------------------------
+Source (NL):      En omdat ik dit een interessant idee vond,  besloot ik het op te nemen in een design workshop.
+Reference (EN):   And so, I thought this was an interesting idea, and I incorporated it into a design workshop.
+Word model:       And because I <unk> this really interesting idea -- I decided to take it on a design <unk>
+BPE 2000:         And because I found this an interesting idea, I decided to take it in a design of design.
+BPE 4000:         And because I found this was an interesting idea, I decided to take it up in a design workshop.
+
+Example 7
+--------------------------------------------------
+Source (NL):      En het was een groot succes.
+Reference (EN):   And it was a huge success.
+Word model:       And it was a big <unk>
+BPE 2000:         And it was a big success.
+BPE 4000:         And it was a big success.
+
+Example 8
+--------------------------------------------------
+Source (NL):      Sindsdien heb ik deze oefening gedaan  in ongeveer 70 design workshops over de hele wereld  met studenten, ontwerpers en architecten,  en zelfs met bazen van Fortune 50-bedrijven.
+Reference (EN):   And since then, I've conducted about 70 design workshops across the world with students and designers and architects, even the CTOs of the Fortune 50,
+Word model:       <unk> I've done this <unk> in about 70 <unk> <unk> around the world with <unk> <unk> <unk> and <unk> and even with <unk> of <unk> <unk> <unk>
+BPE 2000:         Since, I've done this exercise this exercise in about 70 design workshops around the world with students, designers and architects, and even with Fortune 50-companies.
+BPE 4000:         Since then I've done this exercise in about 70 design workshops around the world with students, designers and architects, and even with bags of Fortune 50-companies.
+
+Example 9
+--------------------------------------------------
+Source (NL):      En deze oefening  geeft ons diepe inzichten  in hoe mensen samenwerken,  en ik wil een paar daarvan met jullie delen.
+Reference (EN):   and there's something about this exercise that reveals very deep lessons about the nature of collaboration, and I'd like to share some of them with you.
+Word model:       And this <unk> gives us deep <unk> in how people <unk> and I want to share some of you with you.
+BPE 2000:         And this exercise gives us deep insights in how people work together, and I want to share with you.
+BPE 4000:         And these exercise gives our deep insights in how people work together, and I want to share some of that.
+
+Example 10
+--------------------------------------------------
+Source (NL):      Normaal gesproken is de eerste stap  dat mensen zich op de zaak voorbereiden.
+Reference (EN):   So, normally, most people begin by orienting themselves to the task.
+Word model:       <unk> <unk> is the first step that people <unk> on the <unk>
+BPE 2000:         Normally, the first step that people are prepared on the business.
+BPE 4000:         Normally spoken is the first step that people reached on cause.
+
+Example 11
+--------------------------------------------------
+Source (NL):      Ze praten erover, stellen zich voor hoe het eruit gaat zien,  spelen machtsspelletjes.
+Reference (EN):   They talk about it, they figure out what it's going to look like, they jockey for power.
+Word model:       They are talking about how it looks like <unk> <unk>
+BPE 2000:         They talk about it, they're talking about to how it's going to look like, power plays.
+BPE 4000:         They talk about it, and they talk about it, and they're playing power games.
+
+Example 12
+--------------------------------------------------
+Source (NL):      Dan gaan ze plannen, organiseren.
+Reference (EN):   Then they spend some time planning, organizing,
+Word model:       Then they go <unk> <unk>
+BPE 2000:         Then they go plans, organizing.
+BPE 4000:         Then they go organize.
+
+Example 13
+--------------------------------------------------
+Source (NL):      Ze schetsen en monteren spaghetti.
+Reference (EN):   they sketch and they lay out spaghetti.
+Word model:       They <unk> and <unk> <unk>
+BPE 2000:         They sketches and spaghetti.
+BPE 4000:         They're sketi.
+
+Example 14
+--------------------------------------------------
+Source (NL):      Het grootste deel van de tijd bouwen ze  steeds grotere bouwwerken van de spaghetti.
+Reference (EN):   They spend the majority of their time assembling the sticks into ever-growing structures.
+Word model:       Most of the time they <unk> <unk> of the <unk>
+BPE 2000:         The main part of the time, they're building increasingly building the spaghetti.
+BPE 4000:         Most of the time they build increasing the spaghetti.
+
+Example 15
+--------------------------------------------------
+Source (NL):      En op het einde, wanneer de tijd bijna om is  pakt iemand de marshmallow  ze leggen hem er voorzichtig bovenop,  doen een stapje terug en... Tadaa!
+Reference (EN):   And then finally, just as they're running out of time, someone takes out the marshmallow, and then they gingerly put it on top, and then they stand back, and -- ta-da! --
+Word model:       And on the <unk> when the time is almost <unk> <unk> somebody <unk> the <unk> they <unk> him <unk> <unk> do a <unk> back <unk>
+BPE 2000:         And at the end, when the time is almost to take someone the marshmallow them to the marshmallow, they're doing a step back and... Tadaa!
+BPE 4000:         And at the end, when the time is nearly one picks up the marshmallow they put him on top of it, and... Tadadaa!
+

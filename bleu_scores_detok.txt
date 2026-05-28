@@ -1,0 +1,39 @@
+TEST BLEU:
+{
+ "name": "BLEU",
+ "score": 10.4,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+ "verbose_score": "30.4/14.5/7.3/3.7 (BP = 1.000 ratio = 1.265 hyp_len = 39429 ref_len = 31175)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.6.0"
+}
+TEST BLEU:
+{
+ "name": "BLEU",
+ "score": 27.0,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+ "verbose_score": "61.9/35.9/22.4/14.4 (BP = 0.928 ratio = 0.931 hyp_len = 29014 ref_len = 31175)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.6.0"
+}
+TEST BLEU:
+{
+ "name": "BLEU",
+ "score": 28.4,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+ "verbose_score": "62.3/36.9/23.4/15.0 (BP = 0.947 ratio = 0.948 hyp_len = 29554 ref_len = 31175)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.6.0"
+}
