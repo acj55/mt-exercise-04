@@ -29,7 +29,8 @@ def main():
 
     config = f"iwslt2017-{args.src}-{args.trg}"
 
-    available = get_dataset_config_names("IWSLT/iwslt2017", trust_remote_code=True)
+    # CHANGED from "IWSLT/iwslt2017" to "iwslt2017"
+    available = get_dataset_config_names("iwslt2017", trust_remote_code=True)
     if config not in available:
         raise ValueError(
             f"Config {config} not available on Hugging Face. "
@@ -42,7 +43,8 @@ def main():
         out_dir = project_root / out_dir
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    ds = load_dataset("IWSLT/iwslt2017", config, trust_remote_code=True)
+     # CHANGED from "IWSLT/iwslt2017" to "iwslt2017"
+    ds = load_dataset("iwslt2017", config, trust_remote_code=True)
 
     train = ds["train"]
     if args.max_train:

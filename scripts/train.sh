@@ -16,7 +16,9 @@ SECONDS=0
 
 logs=$base/logs
 
-model_name=?
+#model_name=tf_word_nl_en
+#model_name=tf_bpe_2000_nl_en
+model_name=tf_bpe_4000_nl_en
 
 mkdir -p $logs
 
