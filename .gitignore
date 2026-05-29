@@ -17,3 +17,6 @@ venvs/
 
 # IDE
 .vscode/
+
+tensorboard/
+events.out.tfevents*
