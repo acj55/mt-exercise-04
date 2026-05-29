@@ -117,10 +117,10 @@ Output: `bleu_scores_detok.txt`
 
 ### Results
 
-| Model | Tokenization | BPE Merges | Test BLEU |
+| Model | Tokenisation | BPE Merges | Test BLEU |
 |---------|---------|---------|---------|
 | tf_word_nl_en | Word-level | – | 10.4 |
-| tf_bpe_2000_nl_en | BPE | 2000 | 24.2 |
+| tf_bpe_2000_nl_en | BPE | 2000 | 27 |
 | tf_bpe_4000_nl_en | BPE | 4000 | 28.4|
 
 The results are discussed and interpreted in the PDF submitted on OLAT. 
