@@ -1,6 +1,6 @@
 # MT Exercise 4: Byte Pair Encoding, Beam Search
 
-This repository is a starting point for the 4th and final exercise. As before, fork this repo to your own account and then clone it into your preferred directory.
+This repository is a starting point for the 4th and final exercise.
 
 ---
 
@@ -31,51 +31,135 @@ Clone your fork of the repository + Create a virtual environment:
 
 Important: Then activate the env by executing the source command that is output by the shell script above.
 
-Install required dependencies - Follow the instructions provided in the exercise PDF.
+Install required dependencies.
 
 Download data:
 
-       python ./scripts/download_huggingface_data.py --src en --trg nl --out data
+       python ./scripts/download_huggingface_data.py --src nl --trg en --out data
 
-You can choose any supported direction except `de-en`. Good options are `en-nl`, `en-it`, `en-ro`, `nl-en`, `it-en`, or `ro-en`.
+I have chosen the direction `nl-en`.
 
+At first, I could not download it with the provided script. I adapted this slightly by changing "IWSLT/iwslt2017" to "iwslt2017". This then worked.
+
+## Preprocessing
+
+### Tokenisation
+
+Tokenisation on the word-level was performed using `moses` tokenisation.
+
+Script:
+
+       ./scripts/preprocessing.sh
+
+- output directory:
+       - data/tok/
+- generated files:
+       - train.tok.nl
+       - train.tok.en 
+       - dev.tok.nl 
+       - dev.tok.en 
+       - test.tok.nl 
+       - test.tok.en
+
+### BPE learning
+
+BPE preprocessing was performed using `subword-nmt`.
+
+Script:
+
+       ./scripts/learn_bpe.sh
+
+This does the following:
+- Learn joint BPE codes
+-  Apply BPE to train/dev/test
+- Build shared vocabulary
+
+Done with 2000 and 4000 numbers of operations. Is stored in the corresponding output directory:
+- data/bpe_2000/
+- data/bpe_4000/
+
+## Model Configurations
+Config scripts:
+
+`configs/tf_word_nl_en.yaml`
+`configs/tf_bpe_2000_nl_en.yaml`
+`configs/tf_bpe_4000_nl_en.yaml`
+
+## Model Training
 
 Train the model:
 
        ./scripts/train.sh
 
-*the training process can be interrupted at any time. The best checkpoint will always be saved automatically.
+The model names must be changed accordingly. Selection: tf_word_nl_en, tf_bpe_2000_nl_en or tf_bpe_4000_nl_en
 
-Evaluate the model:
+*the training process can be interrupted at any time. The best checkpoint will always be saved automatically.*
 
-       ./scripts/evaluate.sh
+output directories:
+`models/tf_word_nl_en/`
+`models/tf_bpe_2000_nl_en/`
+`models/tf_bpe_4000_nl_en/`
 
-## For Windows (Command Prompt / PowerShell users)
-Manually create and activate a virtual environment:
+## BLEU evaluation
 
-        python -m venv mt_env
-        mt_env\Scripts\activate
+*Note: Unfortunately, I was a bit over-eager and have overseen that the evaluate.sh script was already provided. Therefore, I have created a script for the evaluation myself instead. The functionality remains the same. It is also provided in this directory and can be replicated.*
 
-Note: The make_virtualenv.sh script will not work in native Windows shells.
+Evaluation script:
+      
+       ./scripts/compute_bleu.sh
 
-Manually download the dataset
+Does the following: 
+- remove BPE continuation markers (@@)
+- detokenise output using Sacremoses
+- compute BLEU with SacreBLEU
 
-Use the Python downloader script directly, for example:
+Output: `bleu_scores_detok.txt`
 
-       python scripts/download_huggingface_data.py --src en --trg nl --out data
+## Beam Size experiments
 
-If you want a different language pair, replace `--src` and `--trg` with one of the supported directions listed above.
+The best-performing model `tf_bpe_4000_nl_en` was used for beam-size experiments. I tested beamsizes 1 to 10.
 
-Modify, train, and evaluate
-Once setup is complete, use the instructions in the exercise PDF to run training and evaluation (either by adapting the .sh scripts manually, or by using Git Bash/WSL).
+Script:
 
-#### Notes for Windows Users
+       ./scripts/beam_experiments.sh
 
-  Using Git Bash or WSL is highly recommended for compatibility.
 
-  If using native PowerShell or Command Prompt:
+Does the following: 
+- automatically creates beam-size configs 
+- translates the test set
+- measures runtime
+- computes BLEU
+- stores results in CSV format
 
-  Manual recreation of shell script steps will be necessary.
+- Results directory: 
+       - beam_results/
+- Outputs:
+       - results.csv
+       - translations
+       - BLEU score files
 
-  Always activate your virtual environment before running any training or evaluation steps.
+### Plotting of beam-Size results
+
+Script:
+
+       python scripts/plotting_beam_experiments.py
+
+Generated plots:
+- bleu_vs_beam.png
+- runtime_vs_beam.png
+- bleu_vs_runtime.png
+
+## Translation Analysis & Comparison
+
+I extracted translation examples for manual comparison. The resulting file aligns Dutch source sentence, English reference, word-level output, BPE-2000 output and BPE-4000 output. 
+
+Script:
+
+       python scripts/translation_comparison.py
+
+Output:
+- analysis_translation_examples.txt
+
+## Findings
+The findings are analysed in the PDF submitted to OLAT.
 
